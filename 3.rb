@@ -10,3 +10,17 @@
 #
 ## Решение:
 
+file = File.new('./data/3.txt', 'r:UTF-8')
+
+content = file.readlines
+
+summ = 0
+
+for i in (0..content.size-1)
+    array = content[i].split.map{|j| j.to_i}
+    amount = array.max - array.min
+    summ += amount
+end
+
+puts summ
+
