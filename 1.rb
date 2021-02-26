@@ -15,14 +15,16 @@
 #
 #
 ## Решение:
+
+f = File.new('./data/1.txt', 'r:UTF-8')
+str = f.read
 count = 0
-str = gets.chomp
 
 
-for i in (0..str.length-1)
+for i in (0..str.length)
     if str[i] == ')'
         count -= 1
-    else
+    elsif str[i]=='('
         count += 1
     end
 end
