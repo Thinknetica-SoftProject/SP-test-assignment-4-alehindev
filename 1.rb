@@ -15,7 +15,17 @@
 #
 #
 ## Решение:
+count = 0
+str = gets.chomp
 
 
+for i in (0..str.length-1)
+    if str[i] == ')'
+        count -= 1
+    else
+        count += 1
+    end
+end
 
-
+puts count
+    
